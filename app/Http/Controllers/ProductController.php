@@ -14,7 +14,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all()->sortByDesc('price');
-        // select * from products
+        // select * from products order by price desc
         return view('welcome',['products'=>$products]);
     }
 
